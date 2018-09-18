@@ -1,0 +1,15 @@
+{
+    "info": {
+        "dbversion": "20180316.0",
+        "magic": "wad-qc-factory"
+    },
+    "module": {
+        "description": "MR ACR phantom",
+        "executable": "WAD_MR.sh",
+        "name": "WADlab2_MR_ACR",
+        "code": "matlab",
+        "dependencies": [
+            "mcr94"
+        ]
+    }
+}
