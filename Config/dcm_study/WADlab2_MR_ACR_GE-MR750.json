@@ -1,109 +1,107 @@
 {
+    "cfgformat": "20180910",
     "actions": {
-        "acqdatetime": {
-            "filters": {}, 
-            "params": {}
-        },
-        "logverbose": {
-            "filters": {}, 
+        "WAD_MR_geomZ": {
+            "filters": {},
             "params": {
-                "logMode": "1",
-                "logLevel": "1",
-                "copyOutputDir": ""
+                "match": "ACR SAG LOC"
             }
         },
+        "logverbose": {
+            "filters": {},
+            "params": {
+                "logLevel": "1",
+                "copyOutputDir": "",
+                "logMode": "3"
+            }
+        },
+        "WAD_MR_SNR_MultiChannel": {
+            "filters": {},
+            "params": {
+                "match": "ACR SNR 8CH",
+                "image": "63",
+                "uncombinedImages": "55; 56; 57; 58; 59; 60; 61; 62",
+                "uncombinedCoils": "1; 2; 3; 4; 5; 6; 7; 8",
+                "ROIradius": "75",
+                "combinedImage": "63",
+                "backgroundROIsize": "7",
+                "backgroundROIshift": "112"
+            }
+        },
+        "acqdatetime": {
+            "filters": {},
+            "params": {}
+        },
         "WAD_MR_TxAmplFreq": {
-            "filters": {}, 
+            "filters": {},
             "params": {
                 "match": "ACR TRA T1",
-                "resultsNamePrefix": "",
-                "autoComment1": "ac.description='QC Study Comment'; ac.field='AdditionalPatientHistory'; ac.level=1;",
                 "autoComment2": "ac.description='Scanner Software Version'; ac.field='SoftwareVersion'; ac.level=2;",
-                "autoComment3": "ac.description=''; ac.field=''; ac.level=2;",
-                "autoComment4": "ac.description=''; ac.field=''; ac.level=2;",
-                "autoComment5": "ac.description=''; ac.field=''; ac.level=2;",
                 "TxAmplField": "Private_0019_1094",
-                "TxAmplType": "int16",
+                "autoComment1": "ac.description='QC Study Comment'; ac.field='AdditionalPatientHistory'; ac.level=1;",
+                "autoComment4": "ac.description=''; ac.field=''; ac.level=2;",
+                "TxFreq_f0_MHz": "127.0",
+                "autoComment3": "ac.description=''; ac.field=''; ac.level=2;",
+                "autoComment5": "ac.description=''; ac.field=''; ac.level=2;",
                 "TxFreqField": "ImagingFrequency",
-                "TxFreq_f0_MHz": "127.0"
+                "resultsNamePrefix": "",
+                "TxAmplType": "int16"
             }
         },
         "WAD_MR_geomXY": {
-            "filters": {}, 
+            "filters": {},
             "params": {
                 "match": "ACR TRA T1",
                 "image": "7"
             }
         },
-        "WAD_MR_geomZ": {
-            "filters": {}, 
-            "params": {
-                "match": "ACR SAG LOC"
-            }
-        },
         "WAD_MR_SNR": {
-            "filters": {}, 
+            "filters": {},
             "params": {
                 "match": "ACR SNR 8CH",
                 "image": "63",
-                "backgroundROIshift": "112",
-                "backgroundROIsize": "7",
-                "ROIradius": "75"
-            }
-        },
-        "WAD_MR_SNR_MultiChannel": {
-            "filters": {}, 
-            "params": {
-                "match": "ACR SNR 8CH",
-                "image": "63",
-                "backgroundROIshift": "112",
-                "backgroundROIsize": "7",
                 "ROIradius": "75",
-                "combinedImage": "63",
-                "uncombinedImages": "55; 56; 57; 58; 59; 60; 61; 62",
-                "uncombinedCoils": "1; 2; 3; 4; 5; 6; 7; 8"
+                "backgroundROIsize": "7",
+                "backgroundROIshift": "112"
             }
         },
         "WAD_MR_B0_uniformity": {
-            "filters": {}, 
+            "filters": {},
             "params": {
                 "match": "B0_map",
+                "imagePhase": "18",
                 "type": "GE_VUMC_custom",
-                "imageMagnitude": "7",
-                "imagePhase":  "18"
+                "imageMagnitude": "7"
             }
         }
-    }, 
+    },
+    "info": {
+        "WAD_MR_geomZ": {
+            "params": {}
+        },
+        "logverbose": {
+            "params": {}
+        },
+        "WAD_MR_SNR_MultiChannel": {
+            "params": {}
+        },
+        "WAD_MR_B0_uniformity": {
+            "params": {}
+        },
+        "WAD_MR_geomXY": {
+            "params": {}
+        },
+        "WAD_MR_SNR": {
+            "params": {}
+        },
+        "WAD_MR_TxAmplFreq": {
+            "params": {}
+        }
+    },
     "comments": {
-        "author": "Joost Kuijer, VUmc", 
-        "creator": "Scite", 
-        "description": "WAD MR template configuration for GE scanners", 
-        "params": {
-            "logMode": "0 = quiet, 1 = to logfile, 2 = to screen, 3 = to log + screen",
-            "logLevel": "1 = normal, 2 = output series search",
-            "copyOutputDir": "Create a copy of the module data\/output directory for development and debug purposes. Leave empty to disable.",
-            "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
-            "autoComment1": "Copy DICOM info. Format: ac.description='<your description>'; ac.field='<DICOM field name>'; ac.level=<level>;",
-            "autoComment2": "If not using an autoComment, leave empty or use: ac.description=''; ac.field=''; ac.level=2;",
-            "autoComment3": "",
-            "autoComment4": "",
-            "autoComment5": "",
-            "resultsNamePrefix": "Prefix for results parameter name. For DICOM field used @<DICOM field name>",
-            "TxAmplField": "<DICOM field name>",
-            "TxAmplType": "int16",
-            "TxFreqField": "<DICOM field name>",
-            "TxFreq_f0_MHz": "<reference frequency in MHz>",
-            "image": "instance number for geometry. Valid: <number>, firstInSeries, lastInSeries",
-            "backgroundROIshift": "in [mm]. Background ROI position (relative to phantom centre) for SNR and ghosting. Default value 108",
-            "backgroundROIsize": "in [mm]. Background ROI size for SNR and ghosting. Default value 7.",
-            "ROIradius": "in [mm]. ROI size for SNR, ghosting and uniformity.",
-            "combinedImage": "Instance number of combined image. Valid: <number>, firstInSeries, lastInSeries, inNextSeries",
-            "uncombinedImages": "Instance number for each coil element, separated by ;",
-            "uncombinedCoils": "Coil element number or name corresponding to the instance numbers, separated by ;",
-            "type": "Type of B0 scan. Valid GE_VUMC_custom, GE_B0map, Philips_B0map, PhilipsDoubleEcho, SiemensPhaseDifference, SiemensServiceStimEcho",
-            "imageMagnitude": "Instance number of magnitude image.",
-            "imagePhase":  "Instance number of phase image."
-        }, 
-        "version": "2.0 - 20170724 MSMC"
+        "description": "WAD MR configuration for GE scanners",
+        "creator": "Scite",
+        "version": "2.0 - 20170724 MSMC",
+        "author": "Joost Kuijer, VUmc"
     }
 }
