@@ -6,7 +6,7 @@
     "module": {
         "description": "MR ACR phantom",
         "executable": "WAD_MR.sh",
-        "name": "WADlab2_MR_ACR",
+        "name": "WADlab2_MR",
         "code": "matlab",
         "dependencies": [
             "mcr94"
