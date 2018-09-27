@@ -1,7 +1,7 @@
 {
     "cfgformat": "20180910",
     "comments": {
-        "description": "WADlab2 MR configuration for ACR phantom on GE Discovery MR750",
+        "description": "WADlab2 MR configuration for ACR phantom on GE scanners",
         "creator": "Scite",
         "version": "2.0 - 20180927 MSMC",
         "author": "Joost Kuijer, VUmc"
@@ -13,17 +13,17 @@
         },
         "WAD_MR_TxAmplFreq": {
             "params": {
-                "TxFreqField": "ImagingFrequency",
-                "autoComment2": "ac.description='Scanner Software Version'; ac.field='SoftwareVersion'; ac.level=2;",
-                "autoComment4": "ac.description=''; ac.field=''; ac.level=2;",
-                "TxAmplType": "int16",
-                "autoComment3": "ac.description=''; ac.field=''; ac.level=2;",
-                "TxFreq_f0_MHz": "127.0",
-                "TxAmplField": "Private_0019_1094",
-                "autoComment5": "ac.description=''; ac.field=''; ac.level=2;",
                 "match": "ACR TRA T1",
-                "resultsNamePrefix": "",
+                "TxFreqField": "ImagingFrequency",
                 "autoComment1": "ac.description='QC Study Comment'; ac.field='AdditionalPatientHistory'; ac.level=1;"
+                "autoComment2": "ac.description='Scanner Software Version'; ac.field='SoftwareVersion'; ac.level=2;",
+                "autoComment3": "ac.description=''; ac.field=''; ac.level=2;",
+                "autoComment4": "ac.description=''; ac.field=''; ac.level=2;",
+                "autoComment5": "ac.description=''; ac.field=''; ac.level=2;",
+                "TxAmplField": "Private_0019_1094",
+                "TxAmplType": "int16",
+                "TxFreq_f0_MHz": "127.0",
+                "resultsNamePrefix": "",
             },
             "filters": {}
         },
