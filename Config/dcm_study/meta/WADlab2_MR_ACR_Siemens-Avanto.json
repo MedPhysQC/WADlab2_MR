@@ -1,0 +1,407 @@
+{
+    "comments": {
+        "creator": "Scite",
+        "author": "Joost Kuijer, VUmc",
+        "description": "VUmc Siemens Avanto with ACR phantom"
+    },
+    "results": {
+        "Siemens STE Fieldmap": {
+            "display_level": 1,
+            "units": "",
+            "display_name": "",
+            "constraint_is_active": false,
+            "display_position": 0,
+            "decimals": null,
+            "description": ""
+        },
+        "Geometrie X Diameter mm": {
+            "description": "Horizontale diameter van ACR fantoom",
+            "display_level": 2,
+            "units": "mm",
+            "display_name": "Geometrie: diameter X",
+            "constraint_is_active": true,
+            "display_position": 1013,
+            "decimals": null,
+            "constraint_minlowhighmax": [
+                188.5,
+                189,
+                191,
+                191.5
+            ]
+        },
+        "Geometrie Z: randdetectie (edge image)": {
+            "description": "Geometry Z: edge image",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Geometry Z: edge image",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1019
+        },
+        "SNR multi-channel": {
+            "display_level": 1,
+            "units": "",
+            "display_name": "",
+            "constraint_is_active": false,
+            "display_position": 0,
+            "decimals": null,
+            "description": ""
+        },
+        "B0 map": {
+            "description": "B0 map",
+            "display_level": 1,
+            "units": "",
+            "display_name": "B0 map",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1071
+        },
+        "Transmitter Freq Offset Hz": {
+            "description": "Transmitter Frequentie Offset",
+            "display_level": 2,
+            "units": "Hz",
+            "display_name": "Transmitter: frequentie offset",
+            "constraint_is_active": true,
+            "display_position": 1082,
+            "decimals": null,
+            "constraint_minlowhighmax": [
+                -225620,
+                -224985,
+                -223715,
+                -223080
+            ]
+        },
+        "Geometrie Z Lengte mm": {
+            "description": "Lengte van ACR fantoom",
+            "display_level": 2,
+            "units": "mm",
+            "display_name": "Geometrie: lengte Z",
+            "constraint_is_active": true,
+            "display_position": 1015,
+            "decimals": null,
+            "constraint_minlowhighmax": [
+                146,
+                146.5,
+                148.5,
+                149
+            ]
+        },
+        "B0 uniformiteit series": {
+            "description": "Series used for B0 uniformity",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Series used for B0 uniformity",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1070
+        },
+        "Transmitter Amplitude": {
+            "description": "Transmitter Amplitude",
+            "display_level": 2,
+            "units": "",
+            "display_name": "Transmitter: amplitude",
+            "constraint_refminlowhighmax": [
+                220,
+                -30,
+                -15,
+                15,
+                30
+            ],
+            "constraint_is_active": true,
+            "decimals": 0,
+            "display_position": 1080
+        },
+        "Coil 4 SNR": {
+            "description": "SNR of coil element #4",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 4",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1036
+        },
+        "Coil 7 SNR": {
+            "description": "SNR of coil element #7",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 7",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1039
+        },
+        "Geometrie XY centre pix": {
+            "description": "ROI centre for XY geometry",
+            "display_level": 1,
+            "units": "pixels",
+            "display_name": "ROI centre for XY geometry",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1011
+        },
+        "Geometrie Z Rotatie graden": {
+            "description": "Geometrie: lengte Z (in-plane rotatie)",
+            "display_level": 1,
+            "units": "graden",
+            "display_name": "Geometrie: in-plane beeldrotatie voor lengte Z",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1016
+        },
+        "Row Ghosting %": {
+            "description": "Ghosting in horizontale richting (row)",
+            "display_level": 2,
+            "units": "%",
+            "display_name": "Ghosting: row",
+            "constraint_is_active": true,
+            "display_position": 1050,
+            "decimals": null,
+            "constraint_minlowhighmax": [
+                0,
+                0,
+                0.5,
+                1
+            ]
+        },
+        "Transmitter Referentie Freq Hz": {
+            "description": "Transmitter Referentie Frequentie",
+            "display_level": 1,
+            "units": "Hz",
+            "display_name": "Transmitter: referentie freq",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1081
+        },
+        "Geometrie Z series": {
+            "description": "Series used for Z geometry",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Series used for Z geometry",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1017
+        },
+        "AcquisitionDateTime": {
+            "display_level": 2,
+            "units": "",
+            "display_name": "DateTime",
+            "constraint_is_active": true,
+            "constraint_period": 7,
+            "decimals": null,
+            "display_position": 1000,
+            "description": "date and time of acquisition"
+        },
+        "Fase-coderingsrichting": {
+            "description": "Fase-coderingsrichting",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Ghosting: fase-coderingsrichting",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1052
+        },
+        "B0 Uniformity ppm": {
+            "description": "Homogeniteit van het statisch magneetveld",
+            "display_level": 2,
+            "units": "ppm",
+            "display_name": "B0 homogeniteit",
+            "constraint_is_active": true,
+            "display_position": 1072,
+            "decimals": null,
+            "constraint_minlowhighmax": [
+                0,
+                0,
+                1.5,
+                2
+            ]
+        },
+        "Coil 1 SNR": {
+            "description": "SNR of coil element #1",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 1",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1033
+        },
+        "Geometrie XY series": {
+            "description": "Series used for XY geometry",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Series used for XY geometry",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1010
+        },
+        "Geometrie Z: randdetectie": {
+            "description": "Geometry Z: edge detection image",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Geometry Z: edge detection image",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1018
+        },
+        "Col Ghosting %": {
+            "description": "Ghosting vertikale richting (column)",
+            "display_level": 2,
+            "units": "%",
+            "display_name": "Ghosting: column",
+            "constraint_is_active": true,
+            "display_position": 1051,
+            "decimals": null,
+            "constraint_minlowhighmax": [
+                0,
+                0,
+                0.5,
+                1
+            ]
+        },
+        "Coil 6 SNR": {
+            "description": "SNR of coil element #6",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 6",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1038
+        },
+        "ROIs for SNR and ghosting": {
+            "description": "ROI's for SNR and ghosting",
+            "display_level": 1,
+            "units": "",
+            "display_name": "SNR and ghosting: ROI image",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1032
+        },
+        "Log file": {
+            "description": "Log file of analysis module",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Log file",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 2000
+        },
+        "Coil 8 SNR": {
+            "description": "SNR of coil element #8",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 8",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1040
+        },
+        "Scanner Software Version": {
+            "description": "",
+            "display_level": 1,
+            "units": "",
+            "display_name": "",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 0
+        },
+        "Coil 3 SNR": {
+            "description": "SNR of coil element #3",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 3",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1035
+        },
+        "Geometrie Y Diameter mm": {
+            "description": "Verticale diameter van ACR fantoom",
+            "display_level": 2,
+            "units": "mm",
+            "display_name": "Geometrie: diameter Y",
+            "constraint_is_active": true,
+            "display_position": 1014,
+            "decimals": null,
+            "constraint_minlowhighmax": [
+                188.5,
+                189,
+                191,
+                191.5
+            ]
+        },
+        "Image Uniformity %": {
+            "description": "Uniformiteit van beeldintensiteit",
+            "display_level": "2",
+            "units": "%",
+            "display_name": "Uniformiteit",
+            "constraint_refminlowhighmax": [
+                81.2,
+                -6,
+                -3,
+                3,
+                6
+            ],
+            "constraint_is_active": true,
+            "decimals": "",
+            "display_position": "1060"
+        },
+        "Coil 2 SNR": {
+            "description": "SNR of coil element #2",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 2",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1034
+        },
+        "Combined coils SNR": {
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: combined coils",
+            "constraint_refminlowhighmax": [
+                205,
+                -20,
+                -10,
+                10,
+                20
+            ],
+            "constraint_is_active": true,
+            "display_position": 1030,
+            "decimals": 0,
+            "description": "SNR: combined coils"
+        },
+        "B0 uniformiteit": {
+            "display_level": 1,
+            "units": "",
+            "display_name": "",
+            "constraint_is_active": false,
+            "display_position": 0,
+            "decimals": null,
+            "description": ""
+        },
+        "Coil 5 SNR": {
+            "description": "SNR of coil element #5",
+            "display_level": 2,
+            "units": "",
+            "display_name": "SNR: coil 5",
+            "constraint_is_active": true,
+            "decimals": null,
+            "display_position": 1037
+        },
+        "SNR series": {
+            "description": "Series used for SNR",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Series used for SNR",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1031
+        },
+        "Geometrie X en Y: randdetectie": {
+            "description": "Geometry: XY edge detection image",
+            "display_level": 1,
+            "units": "",
+            "display_name": "Geometry: XY edge detection image",
+            "constraint_is_active": false,
+            "decimals": null,
+            "display_position": 1012
+        }
+    },
+    "metaformat": "20180910"
+}
