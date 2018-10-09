@@ -55,7 +55,6 @@
                 "combinedImage": "63",
                 "backgroundROIsize": "7",
                 "backgroundROIshift": "112",
-                "image": "63",
                 "uncombinedImages": "55; 56; 57; 58; 59; 60; 61; 62",
                 "uncombinedCoils": "1; 2; 3; 4; 5; 6; 7; 8",
                 "match": "ACR SNR 8CH",
@@ -99,14 +98,14 @@
         },
         "WAD_MR_geomXY": {
             "params": {
-				"match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;"
-			}
+    			"match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
+    			"image": "instance number for geometry. Valid: <number>, firstInSeries, lastInSeries"
+    		}
         },
         "WAD_MR_geomZ": {
             "params": {
-				"match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
-				"image": "instance number for geometry. Valid: <number>, firstInSeries, lastInSeries"
-			}
+    			"match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;"
+    		}
         },
 		"WAD_MR_SNR": {
             "params": {
