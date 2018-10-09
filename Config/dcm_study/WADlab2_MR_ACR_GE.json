@@ -3,7 +3,7 @@
     "comments": {
         "description": "WADlab2 MR configuration for ACR phantom on GE scanners",
         "creator": "Scite",
-        "version": "2.0 - 20180927 MSMC",
+        "version": "2.0 - 20181009 MSMC",
         "author": "Joost Kuijer, VUmc"
     },
     "actions": {
