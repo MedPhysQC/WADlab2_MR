@@ -90,10 +90,10 @@
 				"autoComment4": "",
 				"autoComment5": "",
 				"resultsNamePrefix": "Prefix for results parameter name. For DICOM field used @<DICOM field name>",
-				"TxAmplField": "<DICOM field name>",
-				"TxAmplType": "int16",
-				"TxFreqField": "<DICOM field name>",
-				"TxFreq_f0_MHz": "<reference frequency in MHz>"
+				"TxAmplField": "<DICOM field name> where transmitter amplitude is stored",
+				"TxAmplType": "Data type of the DICOM field, valid entries are Matlab types. For GE use 'int16', for Siemens use 'char'",
+				"TxFreqField": "<DICOM field name> where transmitter frequency is stored",
+				"TxFreq_f0_MHz": "<reference frequency in MHz>. Reported value for TxFreq is difference of actual and reference. Choose '0' to disable."
 			}
         },
         "WAD_MR_geomXY": {
