@@ -1,0 +1,140 @@
+{
+    "comments": {
+        "version": "2.0 - 20181009 MSMC",
+        "creator": "Scite",
+        "author": "Joost Kuijer, VUmc",
+        "description": "WAD MR configuration for Siemens scanners"
+    },
+    "info": {
+        "WAD_MR_geomZ": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;"
+            }
+        },
+        "WAD_MR_B0_uniformity": {
+            "params": {
+                "type": "Type of B0 scan. Valid entries are GE_VUMC_custom, GE_B0map, Philips_B0map, PhilipsDoubleEcho, SiemensPhaseDifference, SiemensServiceStimEcho",
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;"
+            }
+        },
+        "WAD_MR_geomXY": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
+                "image": "instance number for geometry. Valid: <number>, firstInSeries, lastInSeries"
+            }
+        },
+        "WAD_MR_TxAmplFreq": {
+            "params": {
+                "autoComment4": "",
+                "autoComment3": "",
+                "autoComment1": "Copy DICOM info. Format: ac.description='<your description>'; ac.field='<DICOM field name>';",
+                "TxAmplType": "Data type of the DICOM field, valid entries are Matlab types. For GE use 'int16', for Siemens use 'char'",
+				"TxAmplPattern": "Text pattern preceding the Tx Amplitude in text string, for Siemens use 'flReferenceAmplitude = '",
+                "TxFreqField": "<DICOM field name> where transmitter frequency is stored",
+                "resultsNamePrefix": "Prefix for results parameter name. For DICOM field used @<DICOM field name>",
+                "TxAmplField": "<DICOM field name> where transmitter amplitude is stored",
+                "autoComment2": "If not using an autoComment, leave empty or use: ac.description=''; ac.field=''",
+                "TxFreq_f0_MHz": "<reference frequency in MHz>. Reported value for TxFreq is difference of actual and reference. Choose '0' to disable.",
+                "autoComment5": "",
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;"
+            }
+        },
+        "WAD_MR_SNR_MultiChannel": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
+                "combinedImage": "Instance number of combined image. Valid: <number>, firstInSeries, lastInSeries, inNextSeries",
+                "ROIradius": "in [mm]. ROI size for SNR, ghosting and uniformity.",
+                "backgroundROIsize": "in [mm]. Background ROI size for SNR and ghosting. Default value 7.",
+                "backgroundROIshift": "in [mm]. Background ROI position (relative to phantom centre) for SNR and ghosting. Default value 108"
+            }
+        },
+        "logverbose": {
+            "params": {
+                "logLevel": "1 = normal, 2 = output series search",
+                "logMode": "0 = quiet, 1 = to logfile, 2 = to screen, 3 = to log + screen",
+                "copyOutputDir": "Create a copy of the module data/output directory for development and debug purposes. Leave empty to disable."
+            }
+        },
+        "WAD_MR_SNR": {
+            "params": {
+                "ROIradius": "in [mm]. ROI size for SNR, ghosting and uniformity.",
+                "backgroundROIsize": "in [mm]. Background ROI size for SNR and ghosting. Default value 7.",
+                "backgroundROIshift": "in [mm]. Background ROI position (relative to phantom centre) for SNR and ghosting. Default value 108",
+                "image": "instance number for geometry. Valid: <number>, firstInSeries, lastInSeries",
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;"
+            }
+        }
+    },
+    "actions": {
+        "WAD_MR_geomZ": {
+            "params": {
+                "match": "ACR SAG DIS2D"
+            },
+            "filters": {}
+        },
+        "WAD_MR_B0_uniformity": {
+            "params": {
+                "type": "SiemensServiceStimEcho",
+                "match": "ACR B0 FIELD"
+            },
+            "filters": {}
+        },
+        "WAD_MR_geomXY": {
+            "params": {
+                "image": "7",
+                "match": "ACR TRA T1 DIS2D"
+            },
+            "filters": {}
+        },
+        "WAD_MR_TxAmplFreq": {
+            "params": {
+                "TxAmplPattern": "flReferenceAmplitude = ",
+                "TxAmplType": "char",
+                "TxFreqField": "ImagingFrequency",
+                "resultsNamePrefix": "",
+                "TxFreq_f0_MHz": "63.863800",
+                "autoComment5": "ac.description=''; ac.field='';",
+                "autoComment4": "ac.description=''; ac.field='';",
+                "autoComment3": "ac.description=''; ac.field='';",
+                "autoComment1": "ac.description='QC Study Comment'; ac.field='AdditionalPatientHistory';",
+                "TxAmplField": "Private_0029_1020",
+                "autoComment2": "ac.description='Scanner Software Version'; ac.field='SoftwareVersion';",
+                "match": "ACR TRA T1 DIS2D"
+            },
+            "filters": {}
+        },
+        "acqdatetime": {
+            "params": {},
+            "filters": {}
+        },
+        "WAD_MR_SNR_MultiChannel": {
+            "params": {
+                "combinedImage": "inNextSeries",
+                "ROIradius": "75",
+                "backgroundROIsize": "7",
+                "backgroundROIshift": "112",
+                "match": "ACR SNR 4CH; @ImagesInSeries=4"
+            },
+            "filters": {}
+        },
+        "logverbose": {
+            "params": {
+                "logLevel": "1",
+                "logMode": "3",
+                "copyOutputDir": ""
+            },
+            "filters": {}
+        },
+        "WAD_MR_SNR": {
+            "params": {
+                "ROIradius": "75",
+                "backgroundROIsize": "7",
+                "backgroundROIshift": "112",
+                "image": "1",
+                "match": "ACR SNR 4CH; @ImagesInSeries=1"
+            },
+            "filters": {}
+        }
+    },
+    "cfgformat": "20180910"
+}
