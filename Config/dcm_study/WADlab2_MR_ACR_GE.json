@@ -122,7 +122,10 @@
 				"match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
 				"combinedImage": "Instance number of combined image. Valid: <number>, firstInSeries, lastInSeries, inNextSeries",
 				"uncombinedImages": "Instance number for each coil element, separated by ;",
-				"uncombinedCoils": "Coil element number or name corresponding to the instance numbers, separated by ;"
+				"uncombinedCoils": "Coil element number or name corresponding to the instance numbers, separated by ;",
+                "ROIradius": "in [mm]. ROI size for SNR, ghosting and uniformity.",
+				"backgroundROIshift": "in [mm]. Background ROI position (relative to phantom centre) for SNR and ghosting. Default value 108",
+				"backgroundROIsize": "in [mm]. Background ROI size for SNR and ghosting. Default value 7."
 			}
         },
         "WAD_MR_B0_uniformity": {
