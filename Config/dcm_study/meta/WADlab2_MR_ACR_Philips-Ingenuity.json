@@ -1,0 +1,292 @@
+{
+    "metaformat": "20180910",
+    "comments": {
+        "creator": "Scite",
+        "author": "Joost Kuijer, VUmc",
+        "description": "VUmc Philips Ingenuity with ACR phantom"
+    },
+    "results": {
+        "Col Ghosting %": {
+            "display_level": 2,
+            "units": "%",
+            "decimals": 2,
+            "description": "Ghosting vertikale richting (column)",
+            "display_position": 1051,
+            "constraint_is_active": true,
+            "display_name": "Ghosting: column",
+            "constraint_minlowhighmax": [
+                -0.1,
+                -0.1,
+                0.5,
+                1
+            ]
+        },
+        "Geometrie X Diameter mm": {
+            "display_level": 2,
+            "units": "mm",
+            "decimals": 2,
+            "description": "Horizontale diameter van ACR fantoom",
+            "display_position": 1013,
+            "constraint_is_active": true,
+            "display_name": "Geometrie: diameter X",
+            "constraint_minlowhighmax": [
+                188.5,
+                189,
+                191,
+                191.5
+            ]
+        },
+        "ROIs for SNR and ghosting": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "ROI's for SNR and ghosting",
+            "display_position": 1032,
+            "constraint_is_active": false,
+            "display_name": "SNR and ghosting: ROI image"
+        },
+        "Transmitter Referentie Freq Hz": {
+            "display_level": 1,
+            "units": "Hz",
+            "decimals": null,
+            "description": "Transmitter Referentie Frequentie",
+            "display_position": 1081,
+            "constraint_is_active": false,
+            "display_name": "Transmitter: referentie freq"
+        },
+        "Fase-coderingsrichting": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Fase-coderingsrichting",
+            "display_position": 1052,
+            "constraint_is_active": false,
+            "display_name": "Ghosting: fase-coderingsrichting"
+        },
+        "Geometrie Z Lengte mm": {
+            "display_level": 2,
+            "units": "mm",
+            "decimals": 2,
+            "description": "Lengte van ACR fantoom",
+            "display_position": 1015,
+            "constraint_is_active": true,
+            "display_name": "Geometrie: lengte Z",
+            "constraint_minlowhighmax": [
+                146,
+                146.5,
+                148.5,
+                149
+            ]
+        },
+        "Transmitter Freq Offset Hz": {
+            "display_level": 2,
+            "units": "Hz",
+            "decimals": null,
+            "description": "Transmitter Frequentie Offset",
+            "display_position": 1082,
+            "constraint_is_active": true,
+            "display_name": "Transmitter: frequentie offset",
+            "constraint_minlowhighmax": [
+                -7570,
+                -6935,
+                -5665,
+                -5030
+            ]
+        },
+        "B0 Uniformity ppm": {
+            "display_level": "2",
+            "units": "ppm",
+            "decimals": "2",
+            "description": "Homogeniteit van het statisch magneetveld",
+            "display_position": "1072",
+            "constraint_is_active": true,
+            "display_name": "B0 homogeniteit",
+            "constraint_minlowhighmax": [
+                0,
+                0,
+                1.5,
+                2
+            ]
+        },
+        "Row Ghosting %": {
+            "display_level": 2,
+            "units": "%",
+            "decimals": 2,
+            "description": "Ghosting in horizontale richting (row)",
+            "display_position": 1050,
+            "constraint_is_active": true,
+            "display_name": "Ghosting: row",
+            "constraint_minlowhighmax": [
+                0,
+                0,
+                0.5,
+                1
+            ]
+        },
+        "AcquisitionDateTime": {
+            "display_level": 2,
+            "units": "",
+            "decimals": null,
+            "description": "date and time of acquisition",
+            "display_position": 1000,
+            "constraint_is_active": true,
+            "display_name": "DateTime",
+            "constraint_period": 7
+        },
+        "Geometrie XY series": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Series used for XY geometry",
+            "display_position": 1010,
+            "constraint_is_active": false,
+            "display_name": "Series used for XY geometry"
+        },
+        "Geometrie XY centre pix": {
+            "display_level": 1,
+            "units": "pixels",
+            "decimals": null,
+            "description": "ROI centre for XY geometry",
+            "display_position": 1011,
+            "constraint_is_active": false,
+            "display_name": "ROI centre for XY geometry"
+        },
+        "Geometrie Y Diameter mm": {
+            "display_level": 2,
+            "units": "mm",
+            "decimals": 2,
+            "description": "Verticale diameter van ACR fantoom",
+            "display_position": 1014,
+            "constraint_is_active": true,
+            "display_name": "Geometrie: diameter Y",
+            "constraint_minlowhighmax": [
+                188.5,
+                189,
+                191,
+                191.5
+            ]
+        },
+        "B0 map": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "B0 map",
+            "display_position": 1071,
+            "constraint_is_active": false,
+            "display_name": "B0 map"
+        },
+        "Geometrie Z: randdetectie": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Geometry Z: edge detection image",
+            "display_position": 1018,
+            "constraint_is_active": false,
+            "display_name": "Geometry Z: edge detection image"
+        },
+        "Geometrie Z: randdetectie (edge image)": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Geometry Z: edge image",
+            "display_position": 1019,
+            "constraint_is_active": false,
+            "display_name": "Geometry Z: edge image"
+        },
+        "Geometrie Z Rotatie graden": {
+            "display_level": 1,
+            "units": "graden",
+            "decimals": null,
+            "description": "Geometrie: lengte Z (in-plane rotatie)",
+            "display_position": 1016,
+            "constraint_is_active": false,
+            "display_name": "Geometrie: in-plane beeldrotatie voor lengte Z"
+        },
+        "SNR series": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Series used for SNR",
+            "display_position": 1031,
+            "constraint_is_active": false,
+            "display_name": "Series used for SNR"
+        },
+        "Scanner Software Version": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "",
+            "display_position": 990,
+            "constraint_is_active": false,
+            "display_name": "Scanner software version"
+        },
+        "Image Uniformity %": {
+            "display_level": 2,
+            "units": "%",
+            "decimals": 1,
+            "description": "Uniformiteit van beeldintensiteit",
+            "display_position": 1060,
+            "constraint_is_active": true,
+            "display_name": "Uniformiteit",
+            "constraint_refminlowhighmax": [
+                85,
+                -6,
+                -3,
+                3,
+                6
+            ]
+        },
+        "B0 uniformiteit series": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Series used for B0 uniformity",
+            "display_position": 1070,
+            "constraint_is_active": false,
+            "display_name": "Series used for B0 uniformity"
+        },
+        "Geometrie X en Y: randdetectie": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Geometry: XY edge detection image",
+            "display_position": 1012,
+            "constraint_is_active": false,
+            "display_name": "Geometry: XY edge detection image"
+        },
+        "Geometrie Z series": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Series used for Z geometry",
+            "display_position": 1017,
+            "constraint_is_active": false,
+            "display_name": "Series used for Z geometry"
+        },
+        "Log file": {
+            "display_level": 1,
+            "units": "",
+            "decimals": null,
+            "description": "Log file of analysis module",
+            "display_position": 2000,
+            "constraint_is_active": false,
+            "display_name": "Log file"
+        },
+        "Combined coils SNR": {
+            "display_level": 2,
+            "units": "",
+            "decimals": 0,
+            "description": "SNR: combined coils",
+            "display_position": 1030,
+            "constraint_is_active": true,
+            "display_name": "SNR: combined coils",
+            "constraint_refminlowhighmax": [
+                500,
+                -30,
+                -20,
+                20,
+                30
+            ]
+        }
+    }
+}
