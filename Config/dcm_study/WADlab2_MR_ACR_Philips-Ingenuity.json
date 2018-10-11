@@ -29,10 +29,10 @@
                 "autoComment4": "",
                 "autoComment3": "",
                 "TxAmplField": "<DICOM field name> where transmitter amplitude is stored",
-                "autoComment1": "Copy DICOM info. Format: ac.description='<your description>'; ac.field='<DICOM field name>';",
+                "autoComment2": "If not using an autoComment, leave empty or use: ac.description=''; ac.field=''",
                 "TxFreqField": "<DICOM field name> where transmitter frequency is stored",
                 "resultsNamePrefix": "Prefix for results parameter name. For DICOM field used @<DICOM field name>",
-                "autoComment2": "If not using an autoComment, leave empty or use: ac.description=''; ac.field=''"
+                "autoComment1": "Copy DICOM info. Format: ac.description='<your description>'; ac.field='<DICOM field name>';"
             }
         },
         "logverbose": {
@@ -77,14 +77,12 @@
         "WAD_MR_TxAmplFreq": {
             "params": {
                 "match": "ACR TRA T1 DIS2D",
-                "TxAmplType": "int16",
-                "TxAmplField": "Private_0029_1020",
+                "TxFreq_f0_MHz": "127.728000",
                 "autoComment5": "ac.description=''; ac.field='';",
                 "autoComment4": "ac.description=''; ac.field='';",
                 "autoComment3": "ac.description=''; ac.field='';",
-                "TxFreqField": "ImagingFrequency",
                 "autoComment2": "ac.description='Scanner Software Version'; ac.field='SoftwareVersion';",
-                "TxFreq_f0_MHz": "127.728000",
+                "TxFreqField": "ImagingFrequency",
                 "resultsNamePrefix": "",
                 "autoComment1": "ac.description='QC Study Comment'; ac.field='StudyComments';"
             },
