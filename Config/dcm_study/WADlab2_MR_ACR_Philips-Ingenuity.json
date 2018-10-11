@@ -1,0 +1,121 @@
+{
+    "info": {
+        "WAD_MR_geomXY": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
+                "image": "instance number for geometry. Valid: <number>, firstInSeries, lastInSeries"
+            }
+        },
+        "WAD_MR_geomZ": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;"
+            }
+        },
+        "WAD_MR_SNR": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
+                "image": "instance number for geometry. Valid: <number>, firstInSeries, lastInSeries",
+                "backgroundROIshift": "in [mm]. Background ROI position (relative to phantom centre) for SNR and ghosting. Default value 108",
+                "backgroundROIsize": "in [mm]. Background ROI size for SNR and ghosting. Default value 7.",
+                "ROIradius": "in [mm]. ROI size for SNR, ghosting and uniformity."
+            }
+        },
+        "WAD_MR_TxAmplFreq": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
+                "TxAmplType": "Data type of the DICOM field, valid entries are Matlab types. For GE use 'int16', for Siemens use 'char'",
+                "TxFreq_f0_MHz": "<reference frequency in MHz>. Reported value for TxFreq is difference of actual and reference. Choose '0' to disable.",
+                "autoComment5": "",
+                "autoComment4": "",
+                "autoComment3": "",
+                "TxAmplField": "<DICOM field name> where transmitter amplitude is stored",
+                "autoComment1": "Copy DICOM info. Format: ac.description='<your description>'; ac.field='<DICOM field name>';",
+                "TxFreqField": "<DICOM field name> where transmitter frequency is stored",
+                "resultsNamePrefix": "Prefix for results parameter name. For DICOM field used @<DICOM field name>",
+                "autoComment2": "If not using an autoComment, leave empty or use: ac.description=''; ac.field=''"
+            }
+        },
+        "logverbose": {
+            "params": {
+                "logMode": "0 = quiet, 1 = to logfile, 2 = to screen, 3 = to log + screen",
+                "logLevel": "1 = normal, 2 = output series search",
+                "copyOutputDir": "Create a copy of the module data/output directory for development and debug purposes. Leave empty to disable."
+            }
+        },
+        "WAD_MR_B0_uniformity": {
+            "params": {
+                "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
+                "type": "Type of B0 scan. Valid entries are GE_VUMC_custom, GE_B0map, Philips_B0map, PhilipsDoubleEcho, SiemensPhaseDifference, SiemensServiceStimEcho",
+                "deltaTE_ms": "For Philips_B0map: delta TE (may be in DICOM field (2005,1075)?"
+            }
+        }
+    },
+    "actions": {
+        "WAD_MR_geomXY": {
+            "params": {
+                "match": "ACR TRA T1 DIS2D",
+                "image": "5"
+            },
+            "filters": {}
+        },
+        "WAD_MR_geomZ": {
+            "params": {
+                "match": "ACR SAG DIS2D"
+            },
+            "filters": {}
+        },
+        "WAD_MR_SNR": {
+            "params": {
+                "match": "ACR SNR 8CH; @ImagesInSeries=11",
+                "image": "5",
+                "backgroundROIshift": "112",
+                "backgroundROIsize": "7",
+                "ROIradius": "75"
+            },
+            "filters": {}
+        },
+        "WAD_MR_TxAmplFreq": {
+            "params": {
+                "match": "ACR TRA T1 DIS2D",
+                "TxAmplType": "int16",
+                "TxAmplField": "Private_0029_1020",
+                "autoComment5": "ac.description=''; ac.field='';",
+                "autoComment4": "ac.description=''; ac.field='';",
+                "autoComment3": "ac.description=''; ac.field='';",
+                "TxFreqField": "ImagingFrequency",
+                "autoComment2": "ac.description='Scanner Software Version'; ac.field='SoftwareVersion';",
+                "TxFreq_f0_MHz": "127.728000",
+                "resultsNamePrefix": "",
+                "autoComment1": "ac.description='QC Study Comment'; ac.field='StudyComments';"
+            },
+            "filters": {}
+        },
+        "logverbose": {
+            "params": {
+                "logMode": "3",
+                "logLevel": "1",
+                "copyOutputDir": ""
+            },
+            "filters": {}
+        },
+        "acqdatetime": {
+            "params": {},
+            "filters": {}
+        },
+        "WAD_MR_B0_uniformity": {
+            "params": {
+                "match": "ACR B0 MAP; @ImagesInSeries=2",
+                "type": "Philips_B0map",
+                "deltaTE_ms": "5"
+            },
+            "filters": {}
+        }
+    },
+    "comments": {
+        "creator": "Scite",
+        "version": "2.0 - 20181009 MSMC",
+        "author": "Joost Kuijer, VUmc",
+        "description": "WAD MR configuration for Siemens scanners"
+    },
+    "cfgformat": "20180910"
+}
