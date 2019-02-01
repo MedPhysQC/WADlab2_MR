@@ -1,6 +1,6 @@
 {
     "comments": {
-        "version": "2.0 - 20181009 MSMC",
+        "version": "2.0 - 20190201 MSMC",
         "creator": "Scite",
         "author": "Joost Kuijer, VUmc",
         "description": "WAD MR configuration for Siemens scanners"
@@ -43,6 +43,7 @@
             "params": {
                 "match": "Match with DICOM SeriesDescription, or use format @<field>=<content> to match with another DICOM field. Multiple criteria separated by ;",
                 "combinedImage": "Instance number of combined image. Valid: <number>, firstInSeries, lastInSeries, inNextSeries",
+                "uncombinedCoilNameFromDicomTag": "Identifier for coil element from DICOM header. Use Matlab convention for DICOM tag",
                 "ROIradius": "in [mm]. ROI size for SNR, ghosting and uniformity.",
                 "backgroundROIsize": "in [mm]. Background ROI size for SNR and ghosting. Default value 7.",
                 "backgroundROIshift": "in [mm]. Background ROI position (relative to phantom centre) for SNR and ghosting. Default value 108"
@@ -110,6 +111,7 @@
         "WAD_MR_SNR_MultiChannel": {
             "params": {
                 "combinedImage": "inNextSeries",
+                "uncombinedCoilNameFromDicomTag": "Private_0051_100f",
                 "ROIradius": "75",
                 "backgroundROIsize": "7",
                 "backgroundROIshift": "112",
